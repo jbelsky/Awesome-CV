@@ -199,6 +199,7 @@
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\hrefsectionstyle}[2]{\href{#1}{\fontsize{16pt}{1em}\bodyfont\bfseries\color{blue}\@sectioncolor {#2}}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -563,7 +564,7 @@
 }
 
 % Define a section for CV
-% Usage: \cvsection{<section-title>}
+% Usage: \vsection{<section-title>}
 \newcommand{\cvsection}[1]{%
   \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
@@ -760,4 +761,13 @@
     \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+}
+
+% Define a section for CV
+% Usage: \vsection{<section-title>}
+\newcommand{\hrefcvsection}[2]{%
+  \vspace{\acvSectionTopSkip}
+  \hrefsectionstyle{#1}{#2}
+  \phantomsection
+  \color{gray}\vhrulefill{0.9pt}
 }
