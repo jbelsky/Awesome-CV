@@ -677,9 +677,9 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=2ex, nosep]
     \setlength{\parskip}{0pt}
-    \setlength{\itemsep}{2pt}
+    \setlength{\itemsep}{4pt}
     \renewcommand{\labelitemi}{\bullet}
 }{%
   \end{itemize}
@@ -757,11 +757,13 @@
   \vspace{-2.0mm}
   \setlength{\tabcolsep}{0pt}
   \setlength{\extrarowheight}{0pt}
+  \renewcommand{\arraystretch}{1.1}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \entrytitlestyle{#1} & \entrydatestyle{#2} \\
     \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+  \renewcommand{\arraystretch}{1}
 }
 
 \newcommand*{\leadershipentry}[3]{
