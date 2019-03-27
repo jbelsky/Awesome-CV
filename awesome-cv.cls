@@ -771,3 +771,22 @@
   \phantomsection
   \color{gray}\vhrulefill{0.9pt}
 }
+
+% Define an environment for presentations
+\newenvironment{presentations}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2.5cm} L{\textwidth - 2.5cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
+\newcommand*{\presentation}[4]{%
+  \honordatestyle{#4} & \honorpositionstyle{#1} \\
+  {} & \honortitlestyle{#2} \xspace \bullet \xspace \xspace \xspace \honortitlestyle{#3} \\
+}
