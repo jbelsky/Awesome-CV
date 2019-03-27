@@ -736,3 +736,28 @@
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
 }
+
+
+
+
+%----------------------------------------
+% Jason A. Belsky additions
+%----------------------------------------
+\newenvironment{resentries}{
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{
+  \end{center}
+  \vspace{-2.0mm}
+}
+
+\newcommand*{\resentry}[5]{
+  \vspace{-2.0mm}
+  \setlength{\tabcolsep}{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrytitlestyle{#2} \\
+    \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
+}
