@@ -763,6 +763,16 @@
   \end{tabular*}%
 }
 
+\newcommand*{\leadershipentry}[3]{
+  \vspace{-2.0mm}
+  \setlength{\tabcolsep}{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+  \end{tabular*}%
+}
+
 % Define a section for CV
 % Usage: \vsection{<section-title>}
 \newcommand{\hrefcvsection}[2]{%
@@ -790,3 +800,4 @@
   \honordatestyle{#4} & \honorpositionstyle{#1} \\
   {} & \honortitlestyle{#2} \xspace \bullet \xspace \xspace \xspace \honortitlestyle{#3} \\
 }
+
