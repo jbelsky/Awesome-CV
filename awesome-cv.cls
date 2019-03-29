@@ -766,7 +766,32 @@
     \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
-  \renewcommand{\arraystretch}{1}
+}
+
+\newcommand*{\resentrybeta}[5]{
+  \vspace{-2.0mm}
+  \setlength{\tabcolsep}{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
+    \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
+  \end{tabular*}%
+  \vspace{-3.0mm}
+  {\fontsize{11pt}{\baselineskip}\bodyfontlight\upshape\color{text} #5}
+  \vspace{1mm}
+}
+
+\newenvironment{resitems}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=*, sep]
+    \setlength{\itemsep}{-1.5mm}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
 }
 
 \newcommand*{\leadershipentry}[3]{
