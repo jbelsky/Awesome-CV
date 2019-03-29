@@ -2,7 +2,7 @@
 - Download the most current version on Google Drive [here](https://bit.ly/2TZn9qi)
 - See below for more information about the Awesome-CV git repo by posquit0
 
-#----------------------------
+* * * * *
 
 <h1 align="center">
   <a href="https://github.com/posquit0/Awesome-CV" title="AwesomeCV Documentation">
