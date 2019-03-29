@@ -401,7 +401,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
+\newcommand{\acvSectionTopSkip}{4mm}
 \newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
@@ -644,7 +644,7 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \renewcommand{\arraystretch}{1.1}
+    \renewcommand{\arraystretch}{1.2}
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2.5cm} L{\textwidth - 5.0cm} R{2.5cm}}
 		
 }{%
@@ -753,7 +753,7 @@
   \begin{center}
 }{
   \end{center}
-  \vspace{-3mm}
+  \vspace{-1.5mm}
 }
 
 \newcommand*{\resentry}[5]{
@@ -798,10 +798,10 @@
   \vspace{-2.0mm}
   \setlength{\tabcolsep}{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
-  \end{tabular*}%
+  \entrytitlestyle{#1} \hfill \entrydatestyle{#2} \\
+  \vspace{0.5mm}
+  {\fontsize{11pt}{\baselineskip}\bodyfontlight\upshape\color{text} #3}
+  \vspace{2mm}
 }
 
 % Define a section for CV
