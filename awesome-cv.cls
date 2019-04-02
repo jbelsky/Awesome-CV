@@ -834,6 +834,23 @@
   {} & \honortitlestyle{#2} \xspace \bullet \xspace \xspace \xspace \honortitlestyle{#3} \\
 }
 
+% Define an environment for presentations
+\newenvironment{skills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \renewcommand{\arraystretch}{1.1}
+}{%
+    \renewcommand{\arraystretch}{1}
+  \end{center}
+}
+
+\newcommand*{\skill}[2]{%
+  \honorpositionstyle{#1} & \honortitlestyle{#2}
+}
+
 % Define an environment for resitems
 \newenvironment{hangitems}{%
   \vspace{-4.0mm}
