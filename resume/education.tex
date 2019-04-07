@@ -3,23 +3,44 @@
 %-------------------------------------------------------------------------------
 \cvsection{Education}
 
+\newenvironment{edentries}{
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{
+  \end{center}
+}
+
+\newcommand*{\edentry}[5]{
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrytitlestyle{#2} \\
+    \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
+}
 
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
-\begin{cventries}
+\begin{edentries}
 
 %---------------------------------------------------------
-  \cventry
-    {B.S. in Computer Science and Engineering} % Degree
-    {POSTECH(Pohang University of Science and Technology)} % Institution
-    {Pohang, S.Korea} % Location
-    {Mar. 2010 - Aug. 2017} % Date(s)
+  \edentry{PhD: Computational Biology and Bioinformatics}{Dec 2015}{\textbf{Duke University} \bullet \xspace Center for Genomics and Computational Biology}{Durham, NC}
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {Got a Chun Shin-Il Scholarship which is given to promising students in CSE Dept.}
+		\item {Dissertation: \href{https://dukespace.lib.duke.edu/dspace/handle/10161/11371}{\color{blue} Genome-wide footprinting uncovers epigenetic regulatory paradigms by revealing the chromatin occupancy landscape}}
+		\item {GPA: 3.97 / 4.0}
       \end{cvitems}
     }
 
+  \edentry{BS: Biological Engineering}{May 2008}{\textbf{Cornell University} \bullet \xspace College of Agriculture and Life Sciences \bullet \xspace College of Engineering}{Ithaca, NY}
+    {
+      \begin{cvitems} % Description(s) bullet points
+		\item {GPA: 4.14 / 4.3 \bullet \xspace Summa Cum Laude}
+		\item {Minor: Biomedical Engineering}
+      \end{cvitems}
+    }
 %---------------------------------------------------------
-\end{cventries}
+\end{edentries}
