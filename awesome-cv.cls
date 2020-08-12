@@ -753,7 +753,7 @@
   \begin{center}
 }{
   \end{center}
-  \vspace{-1.5mm}
+  \vspace{-2mm}
 }
 
 \newcommand*{\resentry}[5]{
