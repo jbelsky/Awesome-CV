@@ -3,44 +3,32 @@
 %-------------------------------------------------------------------------------
 \cvsection{Education}
 
-\newenvironment{edentries}{
-  \vspace{\acvSectionContentTopSkip}
-  \begin{center}
-}{
-  \end{center}
-}
-
-\newcommand*{\edentry}[5]{
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \entrytitlestyle{#1} & \entrytitlestyle{#2} \\
-    \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
-  \end{tabular*}%
-}
-
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
-\begin{edentries}
+\begin{resentries}
 
 %---------------------------------------------------------
-  \edentry{PhD: Computational Biology and Bioinformatics}{Dec 2015}{\textbf{Duke University} \xspace \bullet \xspace\xspace Center for Genomics and Computational Biology}{Durham, NC}
+  \resentrybeta
+	{PhD: Computational Biology and Bioinformatics}
+	{Dec 2015}
+	{\textbf{Duke University} \xspace \bullet \xspace \xspace Center for Genomics and Computational Biology}
+	{Durham, NC}
     {
-      \begin{cvitems} % Description(s) bullet points
-		\item {Dissertation: \href{https://dukespace.lib.duke.edu/dspace/handle/10161/11371}{\color{blue} Genome-wide footprinting uncovers epigenetic regulatory paradigms by revealing the chromatin occupancy landscape}}
-		\item {GPA: 3.97 / 4.0}
-      \end{cvitems}
+      \begin{itemize}[leftmargin=*] % Description(s) bullet points
+		\item{Dissertation: \href{https://dukespace.lib.duke.edu/dspace/handle/10161/11371}{\color{blue} Genome-wide footprinting uncovers epigenetic regulatory paradigms by\\ revealing the chromatin occupancy landscape}}
+      \end{itemize}
     }
 
-  \edentry{BS: Biological Engineering}{May 2008}{\textbf{Cornell University} \xspace \bullet \xspace \xspace College of Agriculture and Life Sciences \xspace \bullet \xspace \xspace College of Engineering}{Ithaca, NY}
+  \resentrybeta
+	{BS: Biological Engineering}
+	{May 2008}
+	{\textbf{Cornell University} \xspace \bullet \xspace \xspace Colleges of Agriculture \& Life Sciences and Engineering}
+	{Ithaca, NY}
     {
-      \begin{cvitems} % Description(s) bullet points
-		\item {GPA: 4.14 / 4.3 \bullet \xspace Summa Cum Laude}
-		\item {Minor: Biomedical Engineering}
-      \end{cvitems}
+      \begin{itemize}[leftmargin=*] % Description(s) bullet points
+		\item{Summa Cum Laude \xspace \bullet \xspace \xspace Minor: Biomedical Engineering}
+      \end{itemize}
     }
 %---------------------------------------------------------
-\end{edentries}
+\end{resentries}

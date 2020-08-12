@@ -191,23 +191,25 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
+\newcommand*{\headernamestyle}[1]{{\fontsize{24pt}{1em}\headerfontlight\bfseries\color{text} #1}}
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\bfseries\color{text} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{7.5pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{11pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{11pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\hrefsectionstyle}[2]{\href{#1}{\fontsize{14pt}{1em}\bodyfont\bfseries\color{blue}\@sectioncolor {#2}}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -217,10 +219,10 @@
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\slshape\color{darktext} #1}}
 
 % For elements of skill
 \newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
@@ -390,17 +392,17 @@
 %% Define helper macros a user can change easily
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{.4mm}
+\newcommand{\acvHeaderAfterNameSkip}{.8mm}
 \newcommand{\acvHeaderAfterPositionSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
+\newcommand{\acvHeaderAfterAddressSkip}{1mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\newcommand{\acvHeaderAfterSocialSkip}{6mm}
+\newcommand{\acvHeaderAfterSocialSkip}{.2mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{4mm}
+\newcommand{\acvSectionContentTopSkip}{2.0mm}
 
 
 %-------------------------------------------------------------------------------
@@ -452,7 +454,8 @@
   \end{minipage}
   \begin{minipage}[c]{\headertextwidth}
     \ifthenelse{\equal{#1}{L}}{\raggedright}{\ifthenelse{\equal{#1}{R}}{\raggedleft}{\centering}}
-    \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
+	\headernamestyle{\@firstname}
+    %\headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
     \\[\acvHeaderAfterNameSkip]%
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
     \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
@@ -543,14 +546,12 @@
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \@extrainfo%
         }%
-    } \\[\acvHeaderAfterSocialSkip]%
-    \ifthenelse{\isundefined{\@quote}}%
-      {}%
-      {\headerquotestyle{\@quote\\}\vspace{\acvHeaderAfterQuoteSkip}}%
+    }
   \end{minipage}%
-  \begin{minipage}[c]{\headerphotowidth}%
-    \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
-  \end{minipage}
+
+%  \begin{minipage}[c]{\headerphotowidth}%
+%    \ifthenelse{\equal{\@photoalign}{right}}{\raggedleft\drawphoto}{}
+%  \end{minipage}
 }
 
 % Define a footer for CV
@@ -563,7 +564,7 @@
 }
 
 % Define a section for CV
-% Usage: \cvsection{<section-title>}
+% Usage: \vsection{<section-title>}
 \newcommand{\cvsection}[1]{%
   \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
@@ -643,9 +644,12 @@
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2.5cm} L{\textwidth - 5.0cm} R{2.5cm}}
+		
 }{%
     \end{tabular*}
+    \renewcommand{\arraystretch}{1}
   \end{center}
 }
 % Define a line of cv information(honor, award or something else)
@@ -676,8 +680,9 @@
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+  \begin{itemize}[leftmargin=2ex, nosep]
     \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{4pt}
     \renewcommand{\labelitemi}{\bullet}
 }{%
   \end{itemize}
@@ -736,3 +741,127 @@
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
 }
+
+
+
+
+%----------------------------------------
+% Jason A. Belsky additions
+%----------------------------------------
+\newenvironment{resentries}{
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{
+  \end{center}
+  \vspace{-2mm}
+}
+
+\newcommand*{\resentry}[5]{
+  \vspace{-2.0mm}
+  \setlength{\tabcolsep}{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
+    \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+  \end{tabular*}%
+}
+
+\newcommand*{\resentrybeta}[5]{
+  \vspace{-2.0mm}
+  \setlength{\tabcolsep}{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
+    \entrypositionstyle{#3} & \entrypositionstyle{#4} \\
+  \end{tabular*}%
+  \vspace{-3.0mm}
+  {\fontsize{11pt}{\baselineskip}\bodyfontlight\upshape\color{text} #5}
+  \vspace{1mm}
+}
+
+\newenvironment{resitems}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=*, sep]
+    \setlength{\itemsep}{-1.5mm}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
+\newcommand*{\leadershipentry}[3]{
+  \vspace{-2.0mm}
+  \setlength{\tabcolsep}{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \entrytitlestyle{#1} \hfill \entrydatestyle{#2} \\
+  \vspace{0.5mm}
+  {\fontsize{11pt}{\baselineskip}\bodyfontlight\upshape\color{text} #3}
+  \vspace{2mm}
+}
+
+% Define a section for CV
+% Usage: \vsection{<section-title>}
+\newcommand{\hrefcvsection}[2]{%
+  \vspace{\acvSectionTopSkip}
+  \hrefsectionstyle{#1}{#2}
+  \phantomsection
+  \color{gray}\vhrulefill{0.9pt}
+}
+
+% Define an environment for presentations
+\newenvironment{presentations}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \renewcommand{\arraystretch}{1.1}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2.5cm} L{\textwidth - 2.5cm}}
+}{%
+    \end{tabular*}
+    \renewcommand{\arraystretch}{1}
+  \end{center}
+}
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
+\newcommand*{\presentation}[4]{%
+  \honordatestyle{#4} & \honorpositionstyle{#1} \\
+  {} & \honortitlestyle{#2} \xspace \bullet \xspace \xspace \xspace \honortitlestyle{#3} \\
+}
+
+% Define an environment for presentations
+\newenvironment{skills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
+  \begin{center}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \renewcommand{\arraystretch}{1.1}
+}{%
+    \renewcommand{\arraystretch}{1}
+  \end{center}
+}
+
+\newcommand*{\skill}[2]{%
+  \honorpositionstyle{#1} & \honortitlestyle{#2}
+}
+
+% Define an environment for resitems
+\newenvironment{hangitems}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex + 59pt, itemindent=-59pt, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{2pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
